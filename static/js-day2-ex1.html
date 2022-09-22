@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js-day2-ex1</title>
+</head>
+<body>
+
+<div id="first" style="width: 100px;margin: 1px;">&nbsp;</div>
+<div id="second" style="width: 100px;margin: 1px;">&nbsp;</div>
+<div id="third" style="width: 100px;margin: 1px;">&nbsp;</div>
+<button id="button1">click me</button>
+
+<script>
+
+    var button = document.getElementById("button1")
+    button.addEventListener("click", clicked, false)
+
+    const allDivs = document.querySelectorAll("div")
+    for (const allDivsKey in allDivs) {
+        const divs = allDivs[allDivsKey]
+        divs.style.backgroundColor = "blue"
+    }
+
+
+    function clicked(){
+        document.getElementById("first").style.backgroundColor = "yellow"
+        document.getElementById("second").style.backgroundColor = "green"
+        document.getElementById("third").style.backgroundColor = "red"
+    }
+
+</script>
+
+</body>
+</html>

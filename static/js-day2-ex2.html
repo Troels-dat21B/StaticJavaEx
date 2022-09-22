@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js-day2-ex2</title>
+    <style>
+        .my-div {
+            width: 25px;
+            height: 25px;
+            background-color: red;
+            margin: 1px;
+        }
+    </style>
+
+</head>
+<body>
+<div id="outer" onclick="">
+    <div id="1" class="my-div"></div>
+    <div id="2" class="my-div"></div>
+    <div id="3" class="my-div"></div>
+    <div id="4" class="my-div"></div>
+    <div id="5" class="my-div"></div>
+    <div id="6" class="my-div"></div>
+    <div id="7" class="my-div"></div>
+    <div id="8" class="my-div"></div>
+    <div id="9" class="my-div"></div>
+    <div id="10" class="my-div"></div>
+</div>
+
+
+<script>
+
+    document.getElementById("outer").onclick = demo
+
+    function demo(evt){
+        const id = evt.target.id;
+        console.log("Hi from div number: " + id)
+        document.getElementById("p-text").innerText = id;
+    }
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
